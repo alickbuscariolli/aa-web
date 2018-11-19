@@ -1,0 +1,209 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title" style="font-weight: bold">Ingredients</h3>
+    </div>
+    <div class="panel-body ingredients-body">
+      <!-- <div class="form-check checkbox-inline" *ngFor="let ingredient of ingredients, let i = index">
+        <input type="checkbox" [value]="ingredient.toggle" (click)="toggleCheckBox(ingredient.id, i)" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">{{ ingredient.name }}</label>
+      </div> -->
+      <div class="accordion" id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingBakingAndGrains">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseBakingAndGrains" aria-expanded="false" aria-controls="collapseBakingAndGrains">
+                Baking and Grains
+              </button>
+            </h5>
+          </div>
+          <div id="collapseBakingAndGrains" class="collapse" aria-labelledby="headingBakingAndGrains" data-parent="#accordion">
+            <div class="card-body">
+              <div class="form-check checkbox-inline" *ngFor="let recipeBacking of recipesBacking, let i = index">
+                <input type="checkbox" [value]="recipeBacking.toggle" (click)="toggleCheckBox(recipeBacking.id, i)" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">{{ recipeBacking.name }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingCondAndSea">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseCondAndSea" aria-expanded="false" aria-controls="collapseCondAndSea">
+                Condiments and Seasoning
+              </button>
+            </h5>
+          </div>
+          <div id="collapseCondAndSea" class="collapse" aria-labelledby="headingCondAndSea" data-parent="#accordion">
+            <div class="card-body">
+              <div class="form-check checkbox-inline" *ngFor="let recipeCondiments of recipesCondiments, let i = index">
+                <input type="checkbox" [value]="recipeCondiments.toggle" (click)="toggleCheckBox(recipeCondiments.id, i)" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">{{ recipeCondiments.name }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingDairy">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseDairy" aria-expanded="false" aria-controls="collapseDairy">
+                Dairy
+              </button>
+            </h5>
+          </div>
+          <div id="collapseDairy" class="collapse" aria-labelledby="headingDairy" data-parent="#accordion">
+            <div class="card-body">
+              <div class="form-check checkbox-inline" *ngFor="let recipeDairy of recipesDairy, let i = index">
+                <input type="checkbox" [value]="recipeDairy.toggle" (click)="toggleCheckBox(recipeDairy.id, i)" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">{{ recipeDairy.name }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFishAndSea">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFishAndSea" aria-expanded="false" aria-controls="collapseFishAndSea">
+                Fish and Seafood
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFishAndSea" class="collapse" aria-labelledby="headingFishAndSea" data-parent="#accordion">
+            <div class="card-body">
+              <div class="form-check checkbox-inline" *ngFor="let recipeFish of recipesFish, let i = index">
+                <input type="checkbox" [value]="recipeFish.toggle" (click)="toggleCheckBox(recipeFish.id, i)" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">{{ recipeFish.name }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFruitAndVege">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFruitAndVege" aria-expanded="false" aria-controls="collapseFruitAndVege">
+                Fruit and Vege
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFruitAndVege" class="collapse" aria-labelledby="headingFruitAndVege" data-parent="#accordion">
+            <div class="card-body">
+              <div class="form-check checkbox-inline" *ngFor="let recipeFruits of recipesFruits, let i = index">
+                <input type="checkbox" [value]="recipeFruits.toggle" (click)="toggleCheckBox(recipeFruits.id, i)" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">{{ recipeFruits.name }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingMeats">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#meatsCollapse" aria-expanded="false" aria-controls="meatsCollapse">
+                Meats
+              </button>
+            </h5>
+          </div>
+          <div id="meatsCollapse" class="collapse" aria-labelledby="headingMeats" data-parent="#accordion">
+            <div class="card-body">
+              <div class="form-check checkbox-inline" *ngFor="let recipeMeats of recipesMeats, let i = index">
+                <input type="checkbox" [value]="recipeMeats.toggle" (click)="toggleCheckBox(recipeMeats.id, i)" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">{{ recipeMeats.name }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title" style="font-weight: bold">Recipes <span class="float-right" *ngIf="recipes.length > 0">{{ recipes.length }} recipe(s) found</span></h3>
+    </div>
+    <div class="panel-body">
+      <div *ngIf="recipes.length === 0">
+        <p>
+          No Recipes found.
+        </p>
+      </div>
+      <div *ngIf="recipes.length > 0">
+        <div class="row">
+          <div class="panel panel-default recipe-panel col-md-3" *ngFor="let recipe of recipes">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{ recipe.title }}</h3>
+            </div>
+            <div class="panel-body recipe-body">
+              <a data-toggle="modal" data-target="#exampleModal" (click)="recipeModalFunc(recipe, recipe.recipe_fk)">
+                <div class="img-size-div">
+                  <img [src]="imgSrc + recipe.imgpath" class="img-size"/>
+                </div>
+              </a>
+              <div class="container">
+                <div class="d-inline">
+                  <h4>Time:</h4>
+                  <p>{{ recipe.time }}</p>
+                </div>
+                <div class="d-inline">
+                  <h4>Ethnicity:</h4>
+                  <p>{{ recipe.ethnicity }}</p>
+                </div>
+                <div class="d-inline">
+                  <h4>Difficulty:</h4>
+                  <p>{{ recipe.difficulty }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Recipe detail modal -->
+<div class="modal fade" *ngIf="recipeModal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">{{ recipeModal.title }}</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <div class="img-size-div">
+            <img [src]="imgSrc + recipeModal.imgpath" class="img-size"/>
+          </div>
+        </div>
+        <div class="modal-body-content">
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Difficulty</h3>
+              <p>{{ recipeModal.difficulty }}</p>
+            </div>
+            <div class="col-md-6">
+              <h3>Time</h3>
+              <p>{{ recipeModal.time }}</p>
+            </div>
+          </div>
+          <hr />
+          <div>
+            <h3>Ingredients</h3>
+            <ul innerHTML="{{ recipeModal.ingredients }}"></ul>
+          </div>
+          <hr />
+          <div>
+            <h3>Directions</h3>
+            <p innerHTML="{{ recipeModal.directions }}"></p>
+          </div>
+          <div>
+            <h3>Reference</h3>
+            <a href="{{ recipeModal.reference }}">Click to view</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.container {
+  padding: 0 9% 0 9%;
+}
+
+h2 {
+  text-align: center;
+  color: #722F37;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+  color: #722F37;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.col-md-4 img {
+  width: 200px;
+  margin-left: 45px;
+}
+
+@media (max-width: 1062px) {
+
+  .col-md-4 {
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}

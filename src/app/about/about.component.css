@@ -1,0 +1,23 @@
+.img-size {
+  height: 185px;
+  width: 185px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+}
+
+.row {
+  padding: 0 10% 0 10%;
+}
+
+h2, h3, p {
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+@media (max-width: 991px) {
+  .img-size {
+    margin-left: 35%;
+  }
+}

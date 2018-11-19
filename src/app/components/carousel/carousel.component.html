@@ -1,0 +1,99 @@
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <a data-toggle="modal" data-target="#exampleModal" (click)="recipeModalFunc(4)">
+        <div class="img-carousel-div">
+          <img src="assets/imgs/carousel/Carouselpic(2).png" class="carousel-image" alt="Recipe 1">
+        </div>
+        <div class="carousel-caption">
+          Vegetable Lasagne
+        </div>
+      </a>
+    </div>
+    <div class="item">
+      <a data-toggle="modal" data-target="#exampleModal" (click)="recipeModalFunc(8)">
+        <div class="img-carousel-div">
+          <img src="assets/imgs/carousel/Carouselpic(1).png" class="carousel-image" alt="Recipe 2">
+        </div>
+        <div class="carousel-caption">
+          Balsamic Dijon Salmon Fillets
+        </div>
+      </a>
+    </div>
+    <div class="item" (click)="carouselClick(3)">
+      <a data-toggle="modal" data-target="#exampleModal" (click)="recipeModalFunc(11)">
+        <div class="img-carousel-div">
+          <img src="assets/imgs/carousel/Carouselpic(3).png" class="carousel-image" alt="Recipe 3">
+        </div>
+        <div class="carousel-caption">
+          Iskender Chicken Kebab
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- Recipe detail motal -->
+<div class="modal fade" *ngIf="recipeModal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">{{ recipeModal.title }}</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <div class="img-size-div">
+            <img [src]="imgSrc + recipeModal.imgpath" class="img-size"/>
+          </div>
+        </div>
+        <div class="modal-body-content">
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Difficulty</h3>
+              <p>{{ recipeModal.difficulty }}</p>
+            </div>
+            <div class="col-md-6">
+              <h3>Time</h3>
+              <p>{{ recipeModal.time }}</p>
+            </div>
+          </div>
+          <hr />
+          <div>
+            <h3>Ingredients</h3>
+            <ul innerHTML="{{ recipeModal.ingredients }}"></ul>
+          </div>
+          <hr />
+          <div>
+            <h3>Directions</h3>
+            <p innerHTML="{{ recipeModal.directions }}"></p>
+          </div>
+          <div>
+            <h3>Reference</h3>
+            <a href="{{ recipeModal.reference }}">Click to view</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
